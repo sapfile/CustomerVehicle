@@ -1,0 +1,72 @@
+﻿<h2>@Model.DataCount Vehicles Listed</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Forename
+            </th>
+            <th>
+                Surname
+            </th>
+            <th>
+                DateOfBirth
+            </th>
+            <th>
+                RegistrationNumber
+            </th>
+            <th>
+                Manufacturer
+            </th>
+            <th>
+                Model
+            </th>
+            <th>
+                EngineSize
+            </th>
+            <th>
+                RegistationDate
+            </th>
+            <th colspan="2">
+                InteriorColour
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Vehicles)
+        {
+            <tr>
+                <td>
+                    @item.Forename
+                </td>
+                <td>
+                    @item.Surname
+                </td>
+                <td>
+                    @item.DateOfBirth.ToShortDateString()
+                </td>
+                <td>
+                    @item.RegistrationNumber
+                </td>
+                <td>
+                    @item.Manufacturer
+                </td>
+                <td>
+                    @item.Model
+                </td>
+                <td>
+                    @item.EngineSize
+                </td>
+                <td>
+                    @item.RegistationDate.ToShortDateString()
+                </td>
+                <td>
+                    @item.InteriorColour
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Details", "Vehicle", new { id = item.VehicleId })
+                    <a onclick="DeleteVehicle(@item.VehicleId)" style="cursor:pointer">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

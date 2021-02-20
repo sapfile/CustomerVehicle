@@ -1,0 +1,15 @@
+﻿@model CustomerVehicle.UI.Models.Customer.ImportFileViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form method="post" enctype="multipart/form-data">
+
+    <h6>Chose CSV File:</h6>
+    <input type="file" asp-for="File" />
+    <br />
+    <br />
+    <button type="submit" asp-action="UploadFile">Upload CSV</button>
+
+</form>
