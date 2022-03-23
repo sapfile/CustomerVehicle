@@ -66,51 +66,5 @@ namespace CustomerVehicle.Repository.Repositories.EntityFramework
                 return await ctx.Customers.AnyAsync(wherePredicate);
             }
         }
-
-        //public async Task<int> DeleteAsync(int Id)
-        //{
-        //    using (var ctx = _customerVehicleDbContext())
-        //    {
-        //        var customer = await ctx.Customers.FindAsync(Id);
-
-        //        customer.Deleted = true;
-
-        //        return await ctx.SaveAsync();
-        //    }
-        //}
-
-        //public async Task<Customer> GetCustomer(int CustomerId)
-        //{
-        //    using (var ctx = _customerVehicleDbContext())
-        //    {
-        //        return await ctx
-        //                     .Customers
-        //                     .Include(x => x.Vehicles)
-        //                     .FirstOrDefaultAsync(x => x.CustomerId == CustomerId);
-        //    }
-        //}
-
-        //public async Task<int> InsertAsync(Customer entity)
-        //{
-        //    using (var ctx = _customerVehicleDbContext())
-        //    {
-        //        ctx.Customers.Add(entity);
-
-        //        return await ctx.SaveAsync();
-        //    }
-        //}
-
-
-        //public async Task<int> UpdateAsync(Customer entity)
-        //{
-        //    using (var ctx = _customerVehicleDbContext())
-        //    {
-        //        ctx.AttachEntity(entity);
-
-        //        ctx.SetEntityState(entity, EntityState.Modified);
-
-        //        return await ctx.SaveAsync();
-        //    }
-        //}
     }
 }
